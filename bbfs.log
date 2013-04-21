@@ -1,0 +1,1385 @@
+
+bb_init()
+
+bb_getattr(path="/.Trash", statbuf=0xb756f0f4)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/.Trash", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/.Trash"
+    ERROR bb_getattr lstat: No such file or directory
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_opendir(path="/", fi=0xb6bff124)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/"
+    flags = 0x00098800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/.Trash-1000", statbuf=0xb756f0f4)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/.Trash-1000", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/.Trash-1000"
+    ERROR bb_getattr lstat: No such file or directory
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/.xdg-volume-info", statbuf=0xb6bff0f4)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/.xdg-volume-info", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/.xdg-volume-info"
+    ERROR bb_getattr lstat: No such file or directory
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/autorun.inf", statbuf=0xb61ff0f4)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/autorun.inf", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/autorun.inf"
+    ERROR bb_getattr lstat: No such file or directory
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_readdir(path="/", buf=0xb6200590, filler=0xb776de70, offset=0, fi=0xb756f114)
+calling filler with name .
+calling filler with name foobar.txt
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb62006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/foobar.txt", statbuf=0xb61ff0f4)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/foobar.txt", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/foobar.txt"
+    st_dev = 2065
+    st_ino = 923593
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 6
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x51743322
+    st_mtime = 0x51743301
+    st_ctime = 0x51743301
+
+bb_releasedir(path="/", fi=0xb6bff124)
+    flags = 0x00000000
+    fh_old = 0xb62006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb6bff124)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/"
+    flags = 0x00098800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb6200590, filler=0xb776de70, offset=0, fi=0xb61ff114)
+calling filler with name .
+calling filler with name foobar.txt
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb62006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb6bff124)
+    flags = 0x00000000
+    fh_old = 0xb62006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb6bff124)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/"
+    flags = 0x00098800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb6200590, filler=0xb776de70, offset=0, fi=0xb6bff114)
+calling filler with name .
+calling filler with name foobar.txt
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb62006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb6bff124)
+    flags = 0x00000000
+    fh_old = 0xb62006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb6bff124)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/"
+    flags = 0x00098800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb6200590, filler=0xb776de70, offset=0, fi=0xb6bff114)
+calling filler with name .
+calling filler with name foobar.txt
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb62006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb6bff124)
+    flags = 0x00000000
+    fh_old = 0xb62006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb6bff124)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/"
+    flags = 0x00098800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb6200590, filler=0xb776de70, offset=0, fi=0xb6bff114)
+calling filler with name .
+calling filler with name foobar.txt
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb62006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb6bff124)
+    flags = 0x00000000
+    fh_old = 0xb62006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb6bff124)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/"
+    flags = 0x00098800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb6200590, filler=0xb776de70, offset=0, fi=0xb6bff114)
+calling filler with name .
+calling filler with name foobar.txt
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb62006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb6bff124)
+    flags = 0x00000000
+    fh_old = 0xb62006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb6bff124)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/"
+    flags = 0x00098800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb6200590, filler=0xb776de70, offset=0, fi=0xb6bff114)
+calling filler with name .
+calling filler with name foobar.txt
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb62006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb6bff124)
+    flags = 0x00000000
+    fh_old = 0xb62006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb6bff124)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/"
+    flags = 0x00098800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb6200590, filler=0xb776de70, offset=0, fi=0xb6bff114)
+calling filler with name .
+calling filler with name foobar.txt
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb62006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb6bff124)
+    flags = 0x00000000
+    fh_old = 0xb62006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb6bff124)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/"
+    flags = 0x00098800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb6200590, filler=0xb776de70, offset=0, fi=0xb6bff114)
+calling filler with name .
+calling filler with name foobar.txt
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb62006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb6bff124)
+    flags = 0x00000000
+    fh_old = 0xb62006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb6bff124)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/"
+    flags = 0x00098800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb6200590, filler=0xb776de70, offset=0, fi=0xb6bff114)
+calling filler with name .
+calling filler with name foobar.txt
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb62006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb6bff124)
+    flags = 0x00000000
+    fh_old = 0xb62006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb6bff124)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/"
+    flags = 0x00098800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb6200590, filler=0xb776de70, offset=0, fi=0xb6bff114)
+calling filler with name .
+calling filler with name foobar.txt
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb62006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb6bff124)
+    flags = 0x00000000
+    fh_old = 0xb62006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb6bff124)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/"
+    flags = 0x00098800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb6200590, filler=0xb776de70, offset=0, fi=0xb6bff114)
+calling filler with name .
+calling filler with name foobar.txt
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb62006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb6bff124)
+    flags = 0x00000000
+    fh_old = 0xb62006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb6bff124)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/"
+    flags = 0x00098800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb6200590, filler=0xb776de70, offset=0, fi=0xb6bff114)
+calling filler with name .
+calling filler with name foobar.txt
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb62006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb6bff124)
+    flags = 0x00000000
+    fh_old = 0xb62006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb6bff124)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/"
+    flags = 0x00098800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb6200590, filler=0xb776de70, offset=0, fi=0xb6bff114)
+calling filler with name .
+calling filler with name foobar.txt
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb62006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb756f124)
+    flags = 0x00000000
+    fh_old = 0xb62006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb756f124)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/"
+    flags = 0x00098800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb6c00590, filler=0xb776de70, offset=0, fi=0xb61ff114)
+calling filler with name .
+calling filler with name foobar.txt
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb61ff124)
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb61ff124)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/"
+    flags = 0x00098800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb5800638
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb58004e0, filler=0xb776de70, offset=0, fi=0xb6bff114)
+calling filler with name .
+calling filler with name foobar.txt
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb5800638
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb5800638
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb6bff124)
+    flags = 0x00000000
+    fh_old = 0xb5800638
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb5800638
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb6bff124)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/"
+    flags = 0x00098800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb6200590, filler=0xb776de70, offset=0, fi=0xb756f114)
+calling filler with name .
+calling filler with name foobar.txt
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb62006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb756f124)
+    flags = 0x00000000
+    fh_old = 0xb62006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb756f124)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/"
+    flags = 0x00098800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb6c00590, filler=0xb776de70, offset=0, fi=0xb61ff114)
+calling filler with name .
+calling filler with name foobar.txt
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb61ff124)
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb61ff124)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/"
+    flags = 0x00098800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb5800638
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb58004e0, filler=0xb776de70, offset=0, fi=0xb6bff114)
+calling filler with name .
+calling filler with name foobar.txt
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb5800638
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb5800638
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb6bff124)
+    flags = 0x00000000
+    fh_old = 0xb5800638
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb5800638
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb6bff124)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/"
+    flags = 0x00098800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb6200590, filler=0xb776de70, offset=0, fi=0xb61ff114)
+calling filler with name .
+calling filler with name foobar.txt
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb62006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb61ff124)
+    flags = 0x00000000
+    fh_old = 0xb62006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_opendir(path="/", fi=0xb756f124)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/"
+    flags = 0x00098800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb6c00590, filler=0xb776de70, offset=0, fi=0xb6bff114)
+calling filler with name .
+calling filler with name foobar.txt
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb6bff124)
+    flags = 0x00000000
+    fh_old = 0xb6c006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb6c006e8
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/autorun.inf", statbuf=0xb61ff0f4)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/autorun.inf", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/autorun.inf"
+    ERROR bb_getattr lstat: No such file or directory
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/", statbuf=0xb756f0e4)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/"
+    st_dev = 2065
+    st_ino = 922860
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5174332c
+    st_mtime = 0x51743327
+    st_ctime = 0x51743327
+
+bb_opendir(path="/", fi=0xb6bff124)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/"
+    flags = 0x00098800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb6200590, filler=0xb776de70, offset=0, fi=0xb61ff114)
+calling filler with name .
+calling filler with name foobar.txt
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb62006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/foobar.txt", statbuf=0xb756f0f4)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/foobar.txt", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/foobar.txt"
+    st_dev = 2065
+    st_ino = 923593
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 6
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x51743322
+    st_mtime = 0x51743301
+    st_ctime = 0x51743301
+
+bb_releasedir(path="/", fi=0xb61ff124)
+    flags = 0x00000000
+    fh_old = 0xb62006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xb756f0e4)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/"
+    st_dev = 2065
+    st_ino = 922860
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5174332c
+    st_mtime = 0x5174333b
+    st_ctime = 0x5174333b
+
+bb_getattr(path="/", statbuf=0xb6bff0e4)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/"
+    st_dev = 2065
+    st_ino = 922860
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5174332c
+    st_mtime = 0x5174333b
+    st_ctime = 0x5174333b
+
+bb_opendir(path="/", fi=0xb61ff124)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/"
+    flags = 0x00098800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb5800638
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb58004e0, filler=0xb776de70, offset=0, fi=0xb756f114)
+calling filler with name .
+calling filler with name foobar.txt
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb5800638
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb5800638
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb61ff124)
+    flags = 0x00000000
+    fh_old = 0xb5800638
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb5800638
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/foobar.txt", statbuf=0xb61ff0f4)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/foobar.txt", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/foobar.txt"
+    st_dev = 2065
+    st_ino = 923593
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 6
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x51743322
+    st_mtime = 0x51743301
+    st_ctime = 0x51743301
+
+bb_getattr(path="/", statbuf=0xb756f0e4)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/"
+    st_dev = 2065
+    st_ino = 922860
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5174333e
+    st_mtime = 0x5174333b
+    st_ctime = 0x5174333b
+
+bb_opendir(path="/", fi=0xb6bff124)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/"
+    flags = 0x00098800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_readdir(path="/", buf=0xb6200590, filler=0xb776de70, offset=0, fi=0xb61ff114)
+calling filler with name .
+calling filler with name foobar.txt
+calling filler with name ..
+    flags = 0x00000000
+    fh_old = 0xb62006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb6bff124)
+    flags = 0x00000000
+    fh_old = 0xb62006e8
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0xffffffffb62006e8
+    lock_owner = 0x0000000000000000
+
+bb_access(path="/", mask=01)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/"
+
+bb_access(path="/foobar.txt", mask=02)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/foobar.txt", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/foobar.txt"
+
+bb_open(path"/foobar.txt", fi=0xb6bff1b0)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/foobar.txt", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/foobar.txt"
+    flags = 0x00008000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/.foobar.txt.swp", statbuf=0xb61ff0f4)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/.foobar.txt.swp", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/.foobar.txt.swp"
+    ERROR bb_getattr lstat: No such file or directory
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/.foobar.txt.swp", statbuf=0xb756f0f4)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/.foobar.txt.swp", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/.foobar.txt.swp"
+    ERROR bb_getattr lstat: No such file or directory
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_create(path="/.foobar.txt.swp", mode=0100600, fi=0xb6bff1a0)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/.foobar.txt.swp", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/.foobar.txt.swp"
+    flags = 0x000080c2
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x0000000000000000
+
+bb_fgetattr(path="/.foobar.txt.swp", statbuf=0xb6bff0b4, fi=0xb6bff1a0)
+    flags = 0x000080c2
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x0000000000000000
+    st_dev = 2065
+    st_ino = 923374
+    st_mode = 0100600
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x5174333e
+    st_mtime = 0x5174333e
+    st_ctime = 0x5174333e
+
+bb_getattr(path="/.foobar.txt.swx", statbuf=0xb61ff0f4)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/.foobar.txt.swx", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/.foobar.txt.swx"
+    ERROR bb_getattr lstat: No such file or directory
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/.foobar.txt.swx", statbuf=0xb756f0f4)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/.foobar.txt.swx", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/.foobar.txt.swx"
+    ERROR bb_getattr lstat: No such file or directory
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_create(path="/.foobar.txt.swx", mode=0100600, fi=0xb6bff1a0)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/.foobar.txt.swx", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/.foobar.txt.swx"
+    flags = 0x000080c2
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000007
+    lock_owner = 0x0000000000000000
+
+bb_fgetattr(path="/.foobar.txt.swx", statbuf=0xb6bff0b4, fi=0xb6bff1a0)
+    flags = 0x000080c2
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000007
+    lock_owner = 0x0000000000000000
+    st_dev = 2065
+    st_ino = 923590
+    st_mode = 0100600
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x5174333e
+    st_mtime = 0x5174333e
+    st_ctime = 0x5174333e
+
+bb_flush(path="/.foobar.txt.swx", fi=0xb61ff1b0)
+    flags = 0x00000000
+    fh_old = 0x00000007
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000007
+    lock_owner = 0x46db7290d16bd6dc
+
+bb_release(path="/.foobar.txt.swx", fi=0xb6bff1a0)
+    flags = 0x00008002
+    fh_old = 0x00000007
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000007
+    lock_owner = 0x0000000000000000
+bb_unlink(path="/.foobar.txt.swx")
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/.foobar.txt.swx", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/.foobar.txt.swx"
+
+bb_flush(path="/.foobar.txt.swp", fi=0xb756f1b0)
+    flags = 0x00000000
+    fh_old = 0x00000006
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x46db7290d16bd6dc
+
+bb_release(path="/.foobar.txt.swp", fi=0xb6bff1a0)
+    flags = 0x00008002
+    fh_old = 0x00000006
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x0000000000000000
+bb_unlink(path="/.foobar.txt.swp")
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/.foobar.txt.swp", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/.foobar.txt.swp"
+
+bb_getattr(path="/.foobar.txt.swp", statbuf=0xb61ff0f4)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/.foobar.txt.swp", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/.foobar.txt.swp"
+    ERROR bb_getattr lstat: No such file or directory
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/.foobar.txt.swp", statbuf=0xb756f0f4)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/.foobar.txt.swp", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/.foobar.txt.swp"
+    ERROR bb_getattr lstat: No such file or directory
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_access(path="/", mask=01)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/"
+
+bb_getattr(path="/.foobar.txt.swp", statbuf=0xb61ff0f4)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/.foobar.txt.swp", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/.foobar.txt.swp"
+    ERROR bb_getattr lstat: No such file or directory
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/.foobar.txt.swp", statbuf=0xb756f0f4)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/.foobar.txt.swp", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/.foobar.txt.swp"
+    ERROR bb_getattr lstat: No such file or directory
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_create(path="/.foobar.txt.swp", mode=0100600, fi=0xb6bff1a0)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/.foobar.txt.swp", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/.foobar.txt.swp"
+    flags = 0x000280c2
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x0000000000000000
+
+bb_fgetattr(path="/.foobar.txt.swp", statbuf=0xb6bff0b4, fi=0xb6bff1a0)
+    flags = 0x000280c2
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x0000000000000000
+    st_dev = 2065
+    st_ino = 923374
+    st_mode = 0100600
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x5174333e
+    st_mtime = 0x5174333e
+    st_ctime = 0x5174333e
+
+bb_access(path="/", mask=01)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/"
+
+bb_getxattr(path = "/.foobar.txt.swp", name = "security.capability", value = 0x00000000, size = 0)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/.foobar.txt.swp", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/.foobar.txt.swp"
+    ERROR bb_getxattr lgetxattr: No data available
+
+bb_write(path="/.foobar.txt.swp", buf=0xb6d4d058, size=4096, offset=0, fi=0xb6bff254)
+    flags = 0x00028002
+    fh_old = 0x00000006
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x0000000000000000
+
+bb_chmod(fpath="/.foobar.txt.swp", mode=0100644)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/.foobar.txt.swp", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/.foobar.txt.swp"
+
+bb_getattr(path="/.foobar.txt.swp", statbuf=0xb61ff054)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/.foobar.txt.swp", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/.foobar.txt.swp"
+    st_dev = 2065
+    st_ino = 923374
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5174333e
+    st_mtime = 0x5174333e
+    st_ctime = 0x5174333e
+
+bb_flush(path="/foobar.txt", fi=0xb756f1b0)
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x46db7290d16bd6dc
+
+bb_release(path="/foobar.txt", fi=0xb6bff1a0)
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+bb_open(path"/foobar.txt", fi=0xb6bff1b0)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/foobar.txt", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/foobar.txt"
+    flags = 0x00008000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+bb_read(path="/foobar.txt", buf=0xb5800610, size=4096, offset=0, fi=0xb61ff1a0)
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+bb_fgetattr(path="/foobar.txt", statbuf=0xb756f0e4, fi=0xb756f1b0)
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    st_dev = 2065
+    st_ino = 923593
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 6
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x51743322
+    st_mtime = 0x51743301
+    st_ctime = 0x51743301
+
+bb_flush(path="/foobar.txt", fi=0xb6bff1b0)
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x46db7290d16bd6dc
+
+bb_release(path="/foobar.txt", fi=0xb61ff1a0)
+    flags = 0x00008000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+bb_access(path="/", mask=01)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/"
+
+bb_flush(path="/.foobar.txt.swp", fi=0xb61ff1b0)
+    flags = 0x00000000
+    fh_old = 0x00000006
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x46db7290d16bd6dc
+
+bb_release(path="/.foobar.txt.swp", fi=0xb6bff1a0)
+    flags = 0x00028002
+    fh_old = 0x00000006
+    writepage = 0
+
+bb_getattr(path="/.foobar.txt.swp", statbuf=0xb756f0f4)
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/.foobar.txt.swp", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/.foobar.txt.swp"
+    st_dev = 2065
+    st_ino = 923374
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5174333e
+    st_mtime = 0x5174333e
+    st_ctime = 0x5174333e
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000006
+    lock_owner = 0x0000000000000000
+bb_unlink(path="/.foobar.txt.swp")
+    bb_fullpath:  rootdir = "/home/jing/programming/OS/driver/FuseFileSys/rootdir", path = "/.foobar.txt.swp", fpath = "/home/jing/programming/OS/driver/FuseFileSys/rootdir/.foobar.txt.swp"

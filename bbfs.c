@@ -435,18 +435,20 @@ int bb_write(const char *path, const char *buf, size_t size, off_t offset, struc
     // no need to get fpath on this one, since I work from fi->fh not the path
     log_fi(fi);
 	
-    char *test = buf;
+    char test[size];
     int i = 0;
     for(i = 0; i < size; i++){
-        *(test+i) = (*(test+i)+1)%256;
+
+        test[i] = (buf[i]+1)%256;
     }
-    retstat = pwrite(fi->fh, buf, size, offset);
-    if (retstat < 0)
+
+    retstat = pwrite(fi->fh, test, size, offset);
+    if (retstat < 0){
 	    retstat = bb_error("bb_write pwrite");
+    }
     
     return retstat;
-}
-
+} 
 /** Get file system statistics
  *
  * The 'f_frsize', 'f_favail', 'f_fsid' and 'f_flag' fields are ignored
@@ -923,8 +925,7 @@ int bb_fgetattr(const char *path, struct stat *statbuf, struct fuse_file_info *f
 struct fuse_operations bb_oper = {
   .getattr = bb_getattr,
   .readlink = bb_readlink,
-  // no .getdir -- that's deprecated
-  .getdir = NULL,
+  .getdir = NULL, //--deprecated
   .mknod = bb_mknod,
   .mkdir = bb_mkdir,
   .unlink = bb_unlink,
@@ -968,7 +969,12 @@ void bb_usage()
 
 int main(int argc, char *argv[])
 {
+    int i = 0;
+    for(i = 0; i < argc; i++){
+        fprintf(stderr, "%s\n",argv[i]);
+    }
     int fuse_stat;
+    int uid;
     struct bb_state *bb_data;
 
     // bbfs doesn't do any access checking on its own (the comment
@@ -990,20 +996,26 @@ int main(int argc, char *argv[])
     // start with a hyphen (this will break if you actually have a
     // rootpoint or mountpoint whose name starts with a hyphen, but so
     // will a zillion other programs)
-    if ((argc < 4) || (argv[argc-2][0] == '-') || (argv[argc-1][0] == '-'))
+    if ((argc < 4) || (argv[argc-2][0] == '-') || (argv[argc-1][0] == '-')){
     	bb_usage();
+    }
 
     bb_data = malloc(sizeof(struct bb_state));
     if (bb_data == NULL) {
     	perror("main calloc");
 	    abort();
-    }
+    } 
+
+    //grab user id
+    uid = *argv[argc-1];
+    argv[argc-1] =NULL;
+    argc--;
 
     // Pull the rootdir out of the argument list and save it in my
     // internal data
-    bb_data->rootdir = realpath(argv[argc-3], NULL);
-    argv[argc-3] = argv[argc-2];
-    argv[argc-2] = NULL;
+    bb_data->rootdir = realpath(argv[argc-2], NULL);
+    argv[argc-2] = argv[argc-1];
+    argv[argc-1] = NULL;
     argc--;
     
     bb_data->logfile = log_open();
