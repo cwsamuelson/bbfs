@@ -42,6 +42,8 @@
 
 #include "log.h"
 
+#include <time.h>
+
 // Report errors to logfile and give -errno to caller
 static int bb_error(char *str)
 {
@@ -85,13 +87,12 @@ int bb_getattr(const char *path, struct stat *statbuf)
     int retstat = 0;
     char fpath[PATH_MAX];
     
-    log_msg("\nbb_getattr(path=\"%s\", statbuf=0x%08x)\n",
-	  path, statbuf);
+    log_msg("\nbb_getattr(path=\"%s\", statbuf=0x%08x)\n", path, statbuf);
     bb_fullpath(fpath, path);
     
     retstat = lstat(fpath, statbuf);
     if (retstat != 0)
-	retstat = bb_error("bb_getattr lstat");
+    	retstat = bb_error("bb_getattr lstat");
     
     log_stat(statbuf);
     
@@ -285,10 +286,24 @@ int bb_chmod(const char *path, mode_t mode)
 {
     int retstat = 0;
     char fpath[PATH_MAX];
+    int uid;
+    struct fuse_context *context;
+    time_t current_time;
+    char* time_string;
     
-    log_msg("\nbb_chmod(fpath=\"%s\", mode=0%03o)\n",
-	    path, mode);
+    context = fuse_get_context();
+    uid = context->uid;
+
+    log_msg("\nbb_chmod(fpath=\"%s\", mode=0%03o)\n", path, mode);
     bb_fullpath(fpath, path);
+
+    current_time = time(NULL);
+    time_string = ctime(&current_time);
+    if(uid != getuid()){
+        log_msg("\nIllegal operation by user %d on file %s at %s", uid, fpath, time_string);
+        retstat = -1;
+        return retstat;
+    }
     
     retstat = chmod(fpath, mode);
     if (retstat < 0)
@@ -299,14 +314,22 @@ int bb_chmod(const char *path, mode_t mode)
 
 /** Change the owner and group of a file */
 int bb_chown(const char *path, uid_t uid, gid_t gid)
-  
 {
     int retstat = 0;
     char fpath[PATH_MAX];
-    
-    log_msg("\nbb_chown(path=\"%s\", uid=%d, gid=%d)\n",
-	    path, uid, gid);
+    time_t current_time;
+    char* time_string;
+
+    log_msg("\nbb_chown(path=\"%s\", uid=%d, gid=%d)\n", path, uid, gid);
     bb_fullpath(fpath, path);
+
+    current_time = time(NULL);
+    time_string = ctime(&current_time);
+    if(uid != getuid()){
+        log_msg("\nIllegal operation by user %d on file %s at %s", uid, fpath, time_string);
+        retstat = -1;
+        return retstat;
+    }
     
     retstat = chown(fpath, uid, gid);
     if (retstat < 0)
@@ -362,17 +385,31 @@ int bb_utime(const char *path, struct utimbuf *ubuf)
  */
 int bb_open(const char *path, struct fuse_file_info *fi)
 {
+    int uid;
     int retstat = 0;
     int fd;
     char fpath[PATH_MAX];
+    struct fuse_context *context;
+    time_t current_time;
+    char* time_string;
     
-    log_msg("\nbb_open(path\"%s\", fi=0x%08x)\n",
-	    path, fi);
+    context = fuse_get_context();
+    uid = context->uid;
+
+    log_msg("\nbb_open(path\"%s\", fi=0x%08x)\n", path, fi);
     bb_fullpath(fpath, path);
+
+    current_time = time(NULL);
+    time_string = ctime(&current_time);
+    if(uid != getuid()){
+        log_msg("\nIllegal operation by user %d on file %s at %s", uid, fpath, time_string);
+        retstat = -1;
+        return retstat;
+    }
     
     fd = open(fpath, fi->flags);
     if (fd < 0)
-	retstat = bb_error("bb_open open");
+    	retstat = bb_error("bb_open open");
     
     fi->fh = fd;
     log_fi(fi);
@@ -438,7 +475,6 @@ int bb_write(const char *path, const char *buf, size_t size, off_t offset, struc
     char test[size];
     int i = 0;
     for(i = 0; i < size; i++){
-
         test[i] = (buf[i]+1)%256;
     }
 
@@ -967,14 +1003,11 @@ void bb_usage()
     abort();
 }
 
+int uid;
 int main(int argc, char *argv[])
 {
-    int i = 0;
-    for(i = 0; i < argc; i++){
-        fprintf(stderr, "%s\n",argv[i]);
-    }
     int fuse_stat;
-    int uid;
+    uid = getuid();
     struct bb_state *bb_data;
 
     // bbfs doesn't do any access checking on its own (the comment
